@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #18191a;
+    color: #ebe4e4;
+    overflow-x: hidden;
+}
+
+/* Screens */
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 0.8s ease;
+}
+
+/* Card */
+.card {
+    background: #242526;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-20px);
+    animation: slideDown 0.6s ease forwards;
+}
+
+.card h2 {
+    color: #e4e6eb;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+/* Inputs & Select */
+.card input,
+.card select {
+    width: 300px;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #3a3b3c;
+    background: #242526;
+    color: #e4e6eb;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.card input:focus,
+.card select:focus {
+    border-color: #2d88ff;
+    box-shadow: 0 0 8px rgba(45, 136, 255, 0.5);
+    outline: none;
+}
+
+/* Buttons */
+.card button {
+    width: 320px;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #2d88ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    background: #1877f2;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Links */
+.card .link {
+    margin-top: 12px;
+    color: #2d88ff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.card .link:hover {
+    color: #1877f2;
+    text-shadow: 0 0 5px rgba(45, 136, 255, 0.7);
+}
+
+/* App Screen */
+.app {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    animation: fadeIn 1s ease;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #242526;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar h1 {
+    color: #2d88ff;
+    font-size: 20px;
+}
+
+.profile-btn {
+    background: #3a3b3c;
+    color: #e4e6eb;
+    padding: 6px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-btn:hover {
+    background: #2d88ff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.top-bar input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #3a3b3c;
+    background: #242526;
+    color: #e4e6eb;
+    transition: all 0.3s ease;
+}
+
+.top-bar input:focus {
+    border-color: #2d88ff;
+    box-shadow: 0 0 8px rgba(45, 136, 255, 0.5);
+}
+
+.top-bar select {
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #3a3b3c;
+    background: #242526;
+    color: #e4e6eb;
+}
+
+/* Posts */
+#posts .post {
+    background: #242526;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+    transition: all 0.3s ease;
+}
+
+#posts .post:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Post header */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.post-header img:hover {
+    transform: scale(1.1);
+}
+
+.post-header h4 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.post-header span {
+    font-size: 12px;
+    color: #b0b3b8;
+    margin-left: 10px;
+}
+
+/* Post content */
+.post-content {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.post-content img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.post-content img:hover {
+    transform: scale(1.03);
+}
+
+/* Post actions */
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.post-actions button {
+    flex: 1;
+    background: #3a3b3c;
+    color: #e4e6eb;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.post-actions button:hover {
+    background: #2d88ff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Avatar Selection */
+.avatar-selection {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.avatar-selection img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.avatar-selection img:hover {
+    transform: scale(1.1);
+    border-color: #2d88ff;
+}
+
+.avatar-selection img.selected {
+    border-color: #2d88ff;
+    box-shadow: 0 0 15px rgba(45, 136, 255, 0.7);
+    transform: scale(1.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.comment-list {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #d1d1d1;
+}
+
+.comment-list p {
+    margin: 3px 0;
+}
